@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html
+xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+<meta charset="ISO-8859-1">
+<title>AddNewTask</title>
+<style>
+	body {
+        font-family: Arial;
+        margin: 0;
+        padding: 0;
+        background-color: #333;
+        align-items: center;
+	    justify-content: center;
+    	
+    }
+	.form-container {
+        width: 380px;
+        margin: 80px auto;
+        background-color: #444; 
+        padding: 20px;
+        border-radius: 8px;
+        color: #fff; 
+    }	
+    .form-container h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #fff;
+    }
+    
+     input[type="text"], input[type="date"], select {
+        width: 90%;
+        padding: 10px;
+        margin: 10px 0 15px 0;
+        border-radius: 6px;
+        border: 1px solid #555;
+        background-color: #333;
+        color: #fff;
+        font-size: 14px;
+    }
+ 
+
+    input::placeholder {
+        color: #ccc; 
+        
+    }
+
+    select option{
+        background-color: #333;
+        color: #fff;
+        padding-right: 20px;
+        width: 90%;
+ 
+    }
+    
+     button {
+        display: block;
+        width: 90%;
+        margin: 10px auto 0 auto;
+        padding: 12px;
+        background-color: #5c6bc0;
+        color: #fff;
+        font-weight: bold;
+        border: none;
+        border-radius: 6px;
+        font-size: 15px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+        background-color: #7986cb;
+    }
+
+	
+
+</style>
+
+</head>
+<body>
+
+	<div class="form-container">
+		<h1>What’s Next?</h1>
+		<hr>
+		<form action= "#" th:action="@{/addTask}" th:object="${taskMate}" method="post">
+			
+			
+			<input type="text"th:field="*{taskName}" placeholder="Add your next task" />
+			
+			<input type="text"th:field="*{taskDescription}" placeholder="Describe how you’ll make it happen 💪" />
+			
+			<label for="createdDate">Choose a date to stay organized</label><br>
+			<input type="date" id="createdDate" th:field="*{createdDate}" />
+			
+
+			<label for="completionStatus" style="color: #fff;">Completion Status:</label><br>
+			<select id="completionStatus" th:field="*{completionStatus}" required>
+    			<option value="">-- How’s it going? --</option>
+   				<option value="Pending">Pending</option>
+ 		   		<option value="In Progress">In Progress</option>
+    			<option value="Completed">Completed</option>
+			</select>
+			
+			<button type="submit">Add Your Next Win</button>
+			
+		</form>
+	</div>
+</body>
+</html>

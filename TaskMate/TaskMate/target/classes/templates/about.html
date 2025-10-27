@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>About Us</title>
+<link rel="stylesheet" th:href="@{/css/style.css}">
+
+<style>
+	body{
+		font-family: Arial, sans-serif;
+		padding: 0;
+		margin: 0;
+  		color: #333;
+  		line-height: 1.6;
+  		background-color: #f8f9fa;
+  		
+	}
+	
+	.hero-section{
+		background: linear-gradient(
+   		to bottom,
+   		rgba(255,255,255,0.10) 0px,   /* very subtle white at the top */
+  	    #333 60px                    /* transitions to hero color at 60px down */
+	  );
+		background-color: #333;
+		color: white;
+		padding: 40px 0 500px 0;
+  		text-align: center;
+  		padding: 30px 0 50px 0;
+  		flex-wrap: wrap;
+  		
+  		
+	}
+	
+	.hero-section h1 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.hero-section h2 {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #f0f0f0;
+  margin-bottom: 30px;
+}
+
+/* Paragraphs inside hero */
+	.hero-section p {
+ 		 max-width: 500px;
+  		margin: 15px auto;
+ 	 font-size: 0.8rem;
+  line-height: 1.8;
+  color: #f5f5f5;
+}	
+
+.footer {
+    background-color: #222; 
+    color: #ccc; 
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 0.9em;
+    margin-top: 0;
+}
+
+.footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.footer-link {
+    color: #5c6bc0; 
+    text-decoration: none;
+    margin: 0 8px;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #ffffff;
+}
+
+
+</style>
+
+</head>
+<body>
+	<div th:insert="~{fragments/navbar :: navbar}"></div>
+	<section class="hero-section">
+	<h1 style="text-align:center;">About TaskMate</h1>
+	<h2 style="text-align:center;">TaskMate helps you plan, organize, and achieve your daily goals effectively.</h2>
+	
+	<p>At TaskMate, we know how busy life gets — endless to-dos, constant reminders, and never enough time.
+That’s why we built TaskMate — a simple, smart companion that helps you stay in control without the chaos.
+</p>
+	
+	<p>We’re not here to overload you with features; we’re here to make life easier, one task at a time.
+TaskMate grows with you, supports your goals, and keeps your life in balance — because productivity should feel empowering, not overwhelming.
+When you stay organized, you stay unstoppable.</p>
+	</section>
+
+<footer class="footer">
+    <div class="footer-content">
+        <p>&copy; 2025 TaskMate. All Rights Reserved.</p>
+        <p>
+            <a href="#" class="footer-link">Privacy Policy</a> | 
+            <a href="#" class="footer-link">Terms of Service</a> | 
+            <a href="#" class="footer-link">Contact Us</a>
+        </p>
+    </div>
+</footer>
+
+</body>
+</html>

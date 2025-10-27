@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Home</title>
+<link rel="stylesheet" th:href="@{/css/style.css}">
+<link rel="stylesheet" th:href="@{/css/home.css}">
+</head>
+<body>
+	
+	<div th:insert="~{fragments/navbar :: navbar}"></div>
+	
+	<section class="hero-section">
+			
+			<div class="content-wrapper">
+            	
+            	<div class="hero-right-img">
+					<img src="/images/home2.png">
+				</div>
+				
+				<div class="hero-left-text">	
+               		<h1>Stay on top of your goals with TaskMate</h1>
+                	<h3>The smart way to plan, organize, and conquer your day.</h3>
+                	
+                	<p>Track your progress, celebrate your wins, and stay motivated every step of the way.</p>
+            		<button class="get-started-button">
+    					<a th:href="@{/addNewTaskForm}">Get Started</a>
+					</button>
+            	</div>
+               
+    		</div>
+    		
+    		<div class="content-wrapper2">
+			<div class="hero-right-text">
+				
+				<h2>Why TaskMate?</h2>
+				<p>With TaskMate, every task feels lighter and every goal feels closer. It's designed to simplify your daily workflow so you can focus on what truly matters.</p>
+				<p>Organize, prioritize, and visualize your to-dos with a clean and intuitive interface that adapts to your routine.</p>
+				<p>Let TaskMate be your daily companion on the road to success — simple, smart, and made just for you.</p>
+			</div>
+			
+			<div class="hero-left-img">
+				<img src="/images/home1.png"/>
+			</div>
+		</div>
+	 </section>
+	 
+	 <footer class="footer">
+    	<div class="footer-content">
+        <p>&copy; 2025 TaskMate. All Rights Reserved.</p>
+        <p>
+            <a href="#" class="footer-link">Privacy Policy</a> | 
+            <a href="#" class="footer-link">Terms of Service</a> | 
+            <a href="#" class="footer-link">Contact Us</a>
+        </p>
+    </div>
+</footer>
+
+	 
+</body>
+</html>

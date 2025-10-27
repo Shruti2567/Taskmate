@@ -1,0 +1,141 @@
+body{
+		font-family: Arial, sans-serif;
+        padding: 0;
+        margin: 0;
+	}
+	
+	.hero-section{
+		background: linear-gradient(
+   		to bottom,
+   		rgba(255,255,255,0.10) 0px,   /* very subtle white at the top */
+  	    #333 60px                    /* transitions to hero color at 60px down */
+  );
+		background-color: #333;
+		 color: #ffffff;
+		 padding: 40px 0 115px 0;
+		 text-align: center;
+		 flex-wrap: wrap;
+	}
+	
+	.content-wrapper{
+		 margin-top: 5px; 
+		padding: 0 ,40px;
+		display: flex;
+		justify-content: center;
+		max-width: 1100px; 
+		margin: 0 auto;
+		align-items: center;
+		
+	}
+	
+	img{
+		max-width: 450px;
+		height: 420px;
+	}
+	.hero-right-img{
+		margin: 20px;
+		margin-left: 5px;
+		width: 60%; 
+		text-align: center; 
+	}
+	
+	.hero-left-text{	
+		margin-top: -50px;
+		width: 55%; 
+		padding: 0 20px;
+		text-align: left;
+		
+	}
+	
+	.hero-left-text h3 {
+     
+    color: #e0e0e0; 
+	}
+
+	.hero-left-text p {
+   
+    	color: #bdbdbd; 
+	}
+	.get-started-button {
+		
+		background-color: #5c6bc0;
+		border: none;
+		padding: 10px 20px;
+		font-weight: bold;
+        border-radius: 6px; 
+        transition: 0.3s;
+        cursor: pointer;
+        font-size: 1em;
+	}
+	
+	
+	.get-started-button a{
+		padding: 0;
+		margin: 0;
+		text-decoration: none;
+		color: white;
+	}
+	
+	.content-wrapper2{
+		display: flex;
+		margin-top: 20px;
+		align-items: center;
+		padding: 15px 60px;
+		max-width: 1100px;
+		margin: 0 auto;
+	}
+	
+	.hero-left-img{
+		margin: 20px;
+		width: 45%; 
+		text-align: center;
+	}
+	
+	.hero-right-text{	
+		width: 55%; 
+		padding: 10px 40px;
+		text-align: left;
+		
+	}
+	
+	.hero-right-text h2 {
+		color: #ffffff;
+		margin-bottom: 15px;
+		font-size: 1.8em;
+	}
+
+	.hero-right-text p {
+		color: #bdbdbd;
+		line-height: 1.6;
+		margin-bottom: 10px;
+		font-size: 1.05em;
+	}
+	
+	
+	.footer {
+    background-color: #222; 
+    color: #ccc; 
+    text-align: center;
+    padding: 10px 10px;
+    font-size: 0.9em;
+    margin-top: 0;
+}
+
+.footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.footer-link {
+    color: #5c6bc0; 
+    text-decoration: none;
+    margin: 0 8px;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #ffffff;
+}
+
+	
+;

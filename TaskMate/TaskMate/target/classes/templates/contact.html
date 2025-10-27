@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Contact Us</title>
+<link rel="stylesheet" th:href="@{/css/style.css}">
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #333;
+        color: #f1f1f1;
+    }
+
+    .hero-section {
+        background: linear-gradient(to bottom, rgba(255,255,255,0.1) 0px, #333 80px);
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .hero-section h1 {
+        font-size: 2em;
+        color: #fff;
+        margin-bottom: 15px;
+    }
+
+    .hero-section p {
+        max-width: 700px;
+        margin: 0 auto;
+        font-size: 1.1em;
+        color: #ccc;
+        line-height: 1.6;
+    }
+
+    .contact-container {
+        background-color: #444;
+        border-radius: 10px;
+        width: 70%;
+        max-width: 800px;
+        margin: 0 auto 50px auto;
+        padding: 30px 40px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    }
+
+    .contact-container h2 {
+        text-align: center;
+        color: #fff;
+        margin-bottom: 20px;
+    }
+
+    .contact-details {
+        line-height: 1.8;
+        font-size: 1em;
+        color: #ddd;
+    }
+
+    .contact-details p {
+        margin: 10px 0;
+    }
+
+    .contact-details a {
+        color: #5c6bc0;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .contact-details a:hover {
+        color: #7986cb;
+    }
+
+    .social-links {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .social-links a {
+        margin: 0 10px;
+        color: #5c6bc0;
+        font-weight: bold;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    .social-links a:hover {
+        color: #7986cb;
+    }
+    
+	.footer {
+    	background-color: #222; 
+    	color: #ccc; 
+    	text-align: center;
+    	padding: 20px 10px;
+    	font-size: 0.9em;
+    	margin-top: 0;
+}
+
+	.footer-content {
+    	max-width: 1000px;
+    	margin: 0 auto;
+	}
+
+	.footer-link {
+    	color: #5c6bc0; 
+    	text-decoration: none;
+    	margin: 0 8px;
+    	transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #ffffff;
+}
+
+
+</style>
+</head>
+
+<body>
+    <div th:insert="~{fragments/navbar :: navbar}"></div>
+
+    <div class="hero-section">
+        <h1>Get in Touch</h1>
+        <p>We’re always excited to connect with our TaskMate community! Whether you have a question, want to share feedback, or just need a little help getting started — we’re here for you.</p>
+    </div>
+
+    <div class="contact-container">
+        <h2>We’d Love to Hear from You!</h2>
+
+        <div class="contact-details">
+            <p>Your thoughts and ideas help us make TaskMate even better, so don’t hesitate to reach out. Let’s work together to make staying organized easier, smarter, and more enjoyable.</p>
+
+            <p>📧 <strong>Email us:</strong> <a href="mailto:hello@taskmate.com">hello@taskmate.com</a></p>
+            <p>🌐 <strong>Find us online:</strong> <a href="https://www.taskmate.com" target="_blank">www.taskmate.com</a></p>
+
+            <div class="social-links">
+                <strong>📱 Follow our journey:</strong><br>
+                <a href="#">Instagram</a> |
+                <a href="#">Twitter</a> |
+                <a href="#">LinkedIn</a>
+            </div>
+
+            <p style="text-align:center; margin-top:25px; ;">We can’t wait to hear from you — your next productive day starts with <strong>TaskMate!</strong></p>
+        </div>
+    </div>
+    
+    <footer class="footer">
+    <div class="footer-content">
+        <p>&copy; 2025 TaskMate. All Rights Reserved.</p>
+        <p>
+            <a href="#" class="footer-link">Privacy Policy</a> | 
+            <a href="#" class="footer-link">Terms of Service</a> | 
+            <a href="#" class="footer-link">Contact Us</a>
+        </p>
+    </div>
+</footer>
+
+</body>
+</html>

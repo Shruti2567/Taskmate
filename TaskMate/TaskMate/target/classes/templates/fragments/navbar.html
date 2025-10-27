@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+
+<!--Navigation Start-->
+    <nav th:fragment="navbar" class="navigation-wrapper">
+        <div class="logo">TaskMate</div>
+
+        <div class="nav-menu-wrapper">
+            <ul class="nav-menu">
+				
+         		<li class="nav-items"><a th:href="@{/home}">HOME</a></li>
+                <li class="nav-items"><a th:href="@{/about}">ABOUT US</a></li>
+                <li class="nav-items"><a th:href="@{/todo}">TODO</a></li>
+                <li class="nav-items"><a th:href="@{/contact}">CONTACT US</a></li>
+            </ul>
+        </div>
+        <div class="buttons">
+            <button class="signup">SIGNUP</button>
+            <button class="login">LOGIN</button>
+        </div>
+    </nav>
+
+</body>
+</html>

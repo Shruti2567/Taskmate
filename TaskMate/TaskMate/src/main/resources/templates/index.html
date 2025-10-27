@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html
+xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+<meta charset="ISO-8859-1">
+<title>TaskMate</title>
+<link rel="stylesheet" th:href="@{/css/style.css}">
+<style>
+	
+    body {
+        font-family: Arial;
+        margin: 0;
+        padding: 0;
+        background-color: #333;
+    }
+
+	.heading
+	{
+		background: linear-gradient(
+   		to bottom,
+   		rgba(255,255,255,0.10) 0px,   /* very subtle white at the top */
+  	    #333 60px                    /* transitions to hero color at 60px down */
+	  );
+		display: flex;	
+		align-items: center;
+		justify-content: space-between;
+		padding: 20px 60px;
+		flex-wrap: wrap;
+		gap: 10px;
+		
+	}
+
+	.heading h1{
+		font-size: 28px;
+		color: white;
+		margin: 5px;
+	}
+	.addTaskButton
+	{
+		background-color: #5c6bc0;
+		padding: 8px 8px;
+		text-decoration: none;
+		color: white;
+		border-radius: 8px;
+		 transition: 0.3s ease;	
+	}
+	
+	.addTaskButton:hover{
+		        background-color: #7986cb;
+	}
+	
+	.divTable
+	{
+		width: 75%;
+		margin: 40px auto;
+		text-align: center;
+	
+	}
+
+	table{
+		width: 100%;
+		min-width: 600px;
+		border-collapse: collapse;
+		background-color: #2f2f2f;
+		color: #fff;
+		border-radius: 10px;
+    	overflow: hidden;
+    	box-shadow: 0 0 15px rgba(0,0,0,0.3);
+	}
+	th, td{
+			
+			padding: 10px 12px;
+			font-size: 14px;
+			text-align: left;
+			
+	}
+	
+	th{
+		border-radius: #444;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		
+	}
+	tr:nth-child(even) {
+    background-color: #3a3a3a;
+	}
+	
+	.actionButtonContainer{
+		display: flex;
+		gap: 8px;
+		justify-content: center;
+	    
+	}
+	.actionButton{
+		text-decoration: none;
+		color: white;
+		display: inline-block;
+		padding: 6px 12px;
+		transition: 0.3s ease;
+   		font-size: 0.85em;
+	}
+	.updateButton {
+    background-color: #5c6bc0;
+    border-radius: 8px;
+}
+
+.updateButton:hover {
+    background-color: #7986cb;
+}
+	
+	.deleteButton {
+    background-color: #e53935;
+    border-radius: 8px
+}
+
+.deleteButton:hover {
+    background-color: #ef5350;
+}
+	
+</style>
+</head>
+<body>
+
+
+<div th:insert="~{fragments/navbar :: navbar}"></div>
+
+<div class="heading">
+	<h1>Task List</h1>
+<a th:href="@{/addNewTaskForm}" class="addTaskButton">Add Task</a>
+
+	
+</div>
+	<div align="center" class="divTable">
+		
+		
+		<table border="1px solid">
+			<thead>
+				<tr>
+					<th>Sr.No</th>
+					<th>Title</th>
+					<th>Task Description</th>
+					<th>Created Date</th>
+					<th>Completion Status</th>
+					<th>Action</th>
+				</tr>
+			</thead>
+			
+			<tbody>
+				<tr th:each="task: ${listTasks}">
+					<td th:text="${task.id}"></td>
+					<td th:text="${task.taskName}"></td>	
+					<td th:text="${task.taskDescription}"></td>	
+					<td th:text="${task.createdDate}"></td>	
+					<td th:text="${task.completionStatus}"></td>
+					<td>
+   						<div class="actionButtonContainer">
+      						<a th:href="@{/showFormForUpdate/{id}(id=${task.id})}" class="actionButton updateButton">Update</a>
+        					<a th:href="@{/deleteTask/{id}(id=${task.id})}" class="actionButton deleteButton">Delete</a>
+
+   						 </div>
+					</td>
+ 					
+				</tr>
+				
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>
+
